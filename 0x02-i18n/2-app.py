@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
-""" Get locale from request """
+""" doc doc doc """
 from flask import Flask, render_template, request
 from flask_babel import Babel
 
 
 class Config(object):
-    """ Config class """
+    """doc doc doc"""
+
     LANGUAGES = ["en", "fr"]
     BABEL_DEFAULT_LOCALE = "en"
     BABEL_DEFAULT_TIMEZONE = "UTC"
@@ -18,13 +19,13 @@ babel = Babel(app)
 
 @babel.localeselector
 def get_locale():
-    """ doc doc """
+    """doc doc doc"""
     return request.accept_languages.best_match(app.config["LANGUAGES"])
 
 
 @app.route("/")
 def index():
-    """ Main route """
+    """doc doc doc"""
     return render_template("2-index.html")
 
 
